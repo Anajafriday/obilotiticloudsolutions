@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.nav-links {
+  @apply text-base hover:text-slate-200 transition-colors duration-300;
+}
+.box {
+  @apply md:w-10/12 md:mx-auto;
+}
