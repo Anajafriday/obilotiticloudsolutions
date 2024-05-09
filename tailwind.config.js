@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./public/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        brand: "#daa520",
+      },
+    },
   },
   plugins: [],
 };

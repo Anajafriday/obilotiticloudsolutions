@@ -7,3 +7,6 @@
 .box {
   @apply md:w-10/12 md:mx-auto;
 }
+body {
+  color: #dfdeda;
+}
