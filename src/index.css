@@ -7,6 +7,36 @@
 .box {
   @apply md:w-10/12 md:mx-auto;
 }
+.container {
+  @apply w-4/5 mx-auto;
+}
 body {
   color: #dfdeda;
+}
+
+.animate-bg {
+  animation: change 5s linear infinite;
+  transition: all 500ms ease;
+}
+@keyframes change {
+  20% {
+    background: green;
+  }
+  50% {
+    background: blue;
+  }
+  70% {
+    background: red;
+  }
+  100% {
+    background: yellow;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero {
+    background: url(../public/imgs-vids/banner-light-grey.png) 80% center /
+      cover no-repeat;
+    min-height: 400px;
+    padding: 40px 0;
+  }
 }

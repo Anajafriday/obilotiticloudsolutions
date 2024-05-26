@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         brand: "#daa520",
       },
+      fontFamily: {
+        poppin: '"Poppins", sans-serif',
+      },
     },
   },
   plugins: [],

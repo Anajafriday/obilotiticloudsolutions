@@ -1,4 +1,5 @@
 const overlayContainer = document.querySelector(".overlay");
+
 const modalOverlay = document.getElementById("modalOverlay");
 const modalCloseBtn = document.querySelectorAll(".modalCloseBtn");
 const nav = document.querySelector(".nav-container");
@@ -8,8 +9,7 @@ const list = document.querySelectorAll(".nav-links");
 const ctaLink = document.querySelectorAll(".cta-link");
 
 const navigate = () => {
-  nav.classList.toggle("left-1/2");
-  nav.classList.toggle("left-full");
+  nav.classList.toggle("hidden");
 
   [openBtn, closeBtn].map((btns) => btns.classList.toggle("hidden"));
 };
@@ -20,7 +20,7 @@ navBtn.addEventListener("click", (e) => {
 
 const useLink = (e) => {
   e.preventDefault();
-  const id = e.target.href.split("#").at(1);
+  const id = e.currentTarget.href.split("#").at(1);
   if (!id) return;
   document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 };
@@ -46,7 +46,7 @@ const toggleModal = () => {
   document.body.classList.toggle("overflow-hidden");
 };
 // Show modal after 20 seconds
-setTimeout(toggleModal, 20000);
+setTimeout(toggleModal, 50000);
 
 // Close modal
 modalCloseBtn.forEach((Btn) => Btn.addEventListener("click", toggleModal));
